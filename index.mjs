@@ -12,7 +12,8 @@ app.get('/', async(req, res) => {
    let response = await fetch(url);
    let data = await response.json();
    console.log(data);
-   let randomImage = data.hits[0].webFormatURL;
+   let randNum = Math.floor(Math.random() * 50);
+   let randomImage = data.hits[randNum].webformatURL;
    res.render('home.ejs', {randomImage});
 });
 
@@ -28,4 +29,23 @@ app.get('/planet', (req, res) => {
 
     // console.log(planetInfo);
     res.render('planetInfo.ejs', {planetInfo, planet_name});
+});
+
+app.get('/nasapod', async(req, res) => {
+   // let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=solar%20system";
+   // let response = await fetch(url);
+   // let data = await response.json();
+   // console.log(data);
+   // let pod = data;
+    // console.log(planetInfo);
+    res.render('pod.ejs'/*, {data}*/);
+});
+
+app.get('/rocks', (req, res) => {
+    let name = req.query.name;
+
+    let info = solarSystem[`get${name}`]();
+
+    // console.log(info);
+    res.render('rocks.ejs', {info, name});
 });

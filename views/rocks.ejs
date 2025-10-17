@@ -7,9 +7,15 @@
 
 <body>
     <%- include("partials/nav.ejs") %>
-    <img src="<%=randomImage%>" width="400">
+    
+    <h2><%=name%></h2>
 
-    <%- include("partials/footer.ejs") %>
+    <%=info.def%>
+    <br>
+    <img src="<%=info.image%>" width="300">
 
+        <%- include("partials/footer.ejs") %>
+    
 </body>
+
 </html>
