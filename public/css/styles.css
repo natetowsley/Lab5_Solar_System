@@ -1,3 +1,27 @@
-/* body {
-    text-align: center;
-} */
+body {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/HuGGeENt6kGyixe3hT9tnY.jpg");
+}
+
+footer {
+    margin-top: 20px;
+    border-top: dotted;
+    color: grey;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+
+.row {
+    align-items: center;
+}
+
+img {
+    width: 90%;
+    height: auto;
+}
+
+#homePic {
+    width: 80%;
+    margin: 0 auto;
+}

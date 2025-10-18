@@ -8,7 +8,7 @@
 <body>
     <%- include("partials/nav.ejs") %>
 
-        <h2 class="m-4 text-center">
+        <h2 class="m-4 text-center text-white">
             <%=planet_name%>
         </h2>
         <div class="container px-4 text-center">
@@ -19,9 +19,18 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="p-3"><img class="rounded-5" src="<%=planetInfo.image%>" width="300"></div>
+                    <div class="p-3"><img class="rounded-5" src="<%=planetInfo.image%>"></div>
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="container px-4 text-center bg-primary text-white rounded-5 p-2" style="width: fit-content">
+            <p>Moons: <%=planetInfo.moons%><br>
+                Distance from Sun: <%=planetInfo.distanceFromSun%><br>
+                Radius: <%=planetInfo.radius%><br>
+                Year Length: <%=planetInfo.yearLength%><br>
+                One Earth Day: <%=planetInfo.oneEarthDay%>
+            </p>
         </div>
         <%- include("partials/footer.ejs") %>
 
