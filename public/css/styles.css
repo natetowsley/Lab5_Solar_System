@@ -6,7 +6,6 @@ footer {
     margin-top: 20px;
     border-top: dotted;
     color: grey;
-    position: fixed;
     bottom: 0;
     left:0;
     width: 100%;
@@ -22,7 +21,7 @@ img {
 }
 
 #homePic {
-    width: 80%;
-    max-width: 800px;
+    max-height: 350px;
+    width: auto;
     margin: 0 auto;
 }
